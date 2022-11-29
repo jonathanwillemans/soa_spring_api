@@ -44,13 +44,13 @@ public class Pokemon {
 
     }
     public void update(Pokemon p){
-        this.id = p.id;
-        this.name = p.name;
-        this.type = p.type;
-        this.attack = p.attack;
-        this.defence = p.defence;
-        this.speed = p.speed;
-        this.level =p.level;
+        this.name = p.getName();
+        this.type = p.getType();
+        this.attack = p.getAttack();
+        this.defence = p.getDefence();
+        this.speed = p.getSpeed();
+        this.level =p.getLevel();
+
     }
     public long getId() {
         return id;
