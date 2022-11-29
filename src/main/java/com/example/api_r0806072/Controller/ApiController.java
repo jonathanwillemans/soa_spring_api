@@ -41,7 +41,7 @@ public class ApiController {
 
     @PutMapping(value = "/update/{id}")
     public String updateFact(@PathVariable long id, @RequestBody Pokemon pokemon) {
-        Pokemon p = repo.findById(id).orElseThrow();
+        Pokemon p = repo.findById(id).get();
         p.update(pokemon);
         return "Pokemon updated";
     }

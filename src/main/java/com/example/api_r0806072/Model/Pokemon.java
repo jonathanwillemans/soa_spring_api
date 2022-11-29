@@ -2,8 +2,7 @@ package com.example.api_r0806072.Model;
 import com.sun.istack.NotNull;
 
 import javax.persistence.*;
-import javax.validation.constraints.Max;
-import javax.validation.constraints.Min;
+
 
 @Entity
 public class Pokemon {
@@ -15,14 +14,12 @@ public class Pokemon {
     private String name;
     @NotNull
     private String type;
-    @Min(value=0, message = "")
     private int attack;
-    @Min(value=0, message = "")
+
     private int defence;
-    @Min(value=0, message = "")
+
     private int speed;
-    @Min(value=0, message = "")
-    @Max(value = 100)
+
     private int level;
 
     public int getLevel() {
