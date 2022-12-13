@@ -13,6 +13,7 @@ import org.springframework.web.server.ResponseStatusException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("/")
@@ -41,7 +42,7 @@ public class ApiController {
 
     @PutMapping(value = "/update/{id}")
     public String updateFact(@PathVariable long id, @RequestBody Pokemon pokemon) {
-        Pokemon p = repo.findById(id).orElseThrow();
+        Pokemon p = repo.findById(id).orElseThrow(() -> new NoSuchElementException("No item with id: "+id));
         p.update(pokemon);
         return "Pokemon updated";
     }
