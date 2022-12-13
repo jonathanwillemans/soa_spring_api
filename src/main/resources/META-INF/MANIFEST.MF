@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: com.example.api_aanmaken_jonathan_willemans_r0806072.ApiAanm
+ akenJonathanWillemansR0806072Application
+
